@@ -1,12 +1,9 @@
 module Components.Hello exposing (..)
 
 import Html exposing (..)
-import Html.Attributes exposing (..)
-import String
+import Html exposing (text)
 
--- hello component
-hello : Int -> Html a
-hello model =
-  div
-    [ class "h1" ]
-    [ text ( "Hello, Elm" ++ ( "!" |> String.repeat model ) ) ]
+
+hello : Html a
+hello =
+    div [] [ text "Hello, World!" ]

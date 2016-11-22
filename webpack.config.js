@@ -1,18 +1,18 @@
-var path              = require( 'path' );
-var webpack           = require( 'webpack' );
-var merge             = require( 'webpack-merge' );
-var HtmlWebpackPlugin = require( 'html-webpack-plugin' );
-var autoprefixer      = require( 'autoprefixer' );
-var ExtractTextPlugin = require( 'extract-text-webpack-plugin' );
-var CopyWebpackPlugin = require( 'copy-webpack-plugin' );
+const path              = require( 'path' );
+const webpack           = require( 'webpack' );
+const merge             = require( 'webpack-merge' );
+const HtmlWebpackPlugin = require( 'html-webpack-plugin' );
+const autoprefixer      = require( 'autoprefixer' );
+const ExtractTextPlugin = require( 'extract-text-webpack-plugin' );
+const CopyWebpackPlugin = require( 'copy-webpack-plugin' );
 
 console.log( 'WEBPACK GO!');
 
 // detemine build env
-var TARGET_ENV = process.env.npm_lifecycle_event === 'build' ? 'production' : 'development';
+const TARGET_ENV = process.env.npm_lifecycle_event === 'build' ? 'production' : 'development';
 
 // common webpack config
-var commonConfig = {
+const commonConfig = {
 
   output: {
     path:       path.resolve( __dirname, 'dist/' ),
